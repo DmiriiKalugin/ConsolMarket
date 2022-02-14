@@ -1,0 +1,6 @@
+/Users/dmitrijkalugin/Developers/C#Projects/Shop/Shop/bin/Debug/Shop.exe
+/Users/dmitrijkalugin/Developers/C#Projects/Shop/Shop/bin/Debug/Shop.pdb
+/Users/dmitrijkalugin/Developers/C#Projects/Shop/Shop/obj/Debug/Shop.csproj.AssemblyReference.cache
+/Users/dmitrijkalugin/Developers/C#Projects/Shop/Shop/obj/Debug/Shop.csproj.CoreCompileInputs.cache
+/Users/dmitrijkalugin/Developers/C#Projects/Shop/Shop/obj/Debug/Shop.exe
+/Users/dmitrijkalugin/Developers/C#Projects/Shop/Shop/obj/Debug/Shop.pdb
