@@ -5,6 +5,7 @@ namespace Shop
 {
     public class Catalog
     {
+        private readonly DbProducts.Shirts _shirts = new DbProducts.Shirts();
         static int invalid = 0;
         public Catalog()
         {
@@ -17,22 +18,29 @@ namespace Shop
             Console.WriteLine("3:Картина");
             Console.WriteLine("4:Значок");
             Console.WriteLine("0:Назад");
+            Console.WriteLine();
+            
             key = Console.ReadKey().Key;
             Console.WriteLine();
             switch (key)
             {
                 case ConsoleKey.D1:
-                    new Tshirts();
+                    Console.WriteLine($"Наименование: {_shirts.Name()}");
+                    Console.WriteLine($"Стоимость: {_shirts.Price().ToString()} рублей");
+                    Console.WriteLine();
+                    Console.WriteLine("Выберите нужное действие:");
+                    Console.WriteLine("1:В корзину");
+                    Console.WriteLine("0:Назад");
                     break;
-                case ConsoleKey.D2:
-                    new Cup();
-                    break;
-                case ConsoleKey.D3:
-                    new Canvas();
-                    break;
-                case ConsoleKey.D4:
-                    new Pin();
-                    break;
+                // case ConsoleKey.D2:
+                //     new Cup();
+                //     break;
+                // case ConsoleKey.D3:
+                //     new Canvas();
+                //     break;
+                // case ConsoleKey.D4:
+                //     new Pin();
+                    // break;
                 case ConsoleKey.D0:
                     new IndexPage();
                     break;
@@ -60,78 +68,60 @@ namespace Shop
             invalid++;  
         }
     }
-    
-    public class Tshirts{
-        ConsoleKey key;
-        static int invalid = 0;
-        public Tshirts()
-        {
-            Console.WriteLine("Футболка новая и красивая");
-            Console.WriteLine("Стоимость: 500 рублей");
-            Console.WriteLine("Доступное количество: 100 шт.");
-            Console.WriteLine("Выберите нужное действие:");
-            Console.WriteLine("1:Купить");
-            Console.WriteLine("0:Назад");
-            
-            key = Console.ReadKey().Key;
-            
-            Console.WriteLine();
-            
-            switch (key)
-            {
-                case ConsoleKey.D1:
-                    new Buy();
-                    break;
-                case ConsoleKey.D0:
-                    new Catalog();
-                    break;
-                default:
-                    InvalidInput();
-                    break;
-            }   
-        }
-        
-        static void InvalidInput()
-        {
-            switch(invalid)
-            {
-                case 0:
-                    Console.WriteLine("Неверная категория");
-                    break;
-                case 1:
-                    Console.WriteLine("Опять не верно. ВНИМАТЕЛЬНЕЙ!");
-                    break;
-                case 2:
-                default:
-                    Console.WriteLine("Для возвращения назад нажмите 0");
-                    break;
-            }
-            invalid++;  
-        }
-            
-        }
-    
-        public class Cup{
-        public Cup()
-        {
-            Console.WriteLine("Кружка");
-        }
-    }
-    
-    public class Canvas{
-        public Canvas()
-        {
-            Console.WriteLine("Картина");
-        }
-    }
-    
-    public class Pin{
-        public Pin()
-        {
-            Console.WriteLine("Значок");
-        }
-    }
 
+    
+    
+    
+    // public class Shirts()
+    // {
+    //     ConsoleKey key;
+    //     static int invalid = 0;
+    //     
+    //     
+    //     
+    //     // public Tshirts()
+    //     // {
+    //     //     Console.WriteLine($"Наименование: {new DBProducts.Shirts().Name()}");
+    //     //     
+
+    //     //     
+    //     //     key = Console.ReadKey().Key;
+    //     //     
+    //     //     Console.WriteLine();
+    //     //     
+    //     //     switch (key)
+    //     //     {
+    //     //         case ConsoleKey.D1:
+    //     //             new Buy();
+    //     //             break;
+    //     //         case ConsoleKey.D0:
+    //     //             new Catalog();
+    //     //             break;
+    //     //         default:
+    //     //             InvalidInput();
+    //     //             break;
+    //     //     }   
+    //     // }
+    //     
+    //     static void InvalidInput()
+    //     {
+    //         switch(invalid)
+    //         {
+    //             case 0:
+    //                 Console.WriteLine("Неверная категория");
+    //                 break;
+    //             case 1:
+    //                 Console.WriteLine("Опять не верно. ВНИМАТЕЛЬНЕЙ!");
+    //                 break;
+    //             case 2:
+    //             default:
+    //                 Console.WriteLine("Для возвращения назад нажмите 0");
+    //                 break;
+    //         }
+    //         invalid++;  
+    //     }
+    // }
+    
     public class Buy{
         static int invalid = 0;
         public Buy()
@@ -144,7 +134,7 @@ namespace Shop
             Console.WriteLine("0:Отменить");
             ConsoleKey choise = Console.ReadKey().Key;
             Console.WriteLine();
-
+    
             switch (choise)
             {
                 case ConsoleKey.D1:
@@ -159,7 +149,7 @@ namespace Shop
                     break;
             }
         }
-
+    
         static void Success()
         {   Console.WriteLine("Товар помещен в корзину");
             Console.WriteLine();
@@ -170,7 +160,7 @@ namespace Shop
             Console.WriteLine("0:Вернутся на главную страницу");
             ConsoleKey key = Console.ReadKey().Key;
             Console.WriteLine();
-
+    
             switch (key)
             {
                 case ConsoleKey.D1:
