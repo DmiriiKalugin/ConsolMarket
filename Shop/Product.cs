@@ -6,6 +6,8 @@ namespace Shop
     {
         public abstract string Name();
         public abstract int Price();
+
+        public abstract void GetAction();
     }
     
 }

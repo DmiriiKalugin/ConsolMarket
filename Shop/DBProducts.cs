@@ -1,3 +1,5 @@
+using System;
+
 namespace Shop
 {
     public class DbProducts
@@ -6,7 +8,7 @@ namespace Shop
         {
             public override string Name()
             {
-                string name = "Красивая футболка";
+                string name = "Чёрная футболка";
                 
                 return name;
             }
@@ -17,13 +19,19 @@ namespace Shop
 
                 return price;
             }
+
+            public override void GetAction()
+            {
+                Console.WriteLine($"Наименование: {Name()}");
+                Console.WriteLine($"Стоимость: {Price().ToString()} рублей");
+            }
         }
         
         public class Cup : Product
         {
             public override string Name()
             {
-                string name = "Красивая кружкка";
+                string name = "Белая кружкка";
                 
                 return name;
             }
@@ -34,13 +42,19 @@ namespace Shop
 
                 return price;
             }
+            
+            public override void GetAction()
+            {
+                Console.WriteLine($"Наименование: {Name()}");
+                Console.WriteLine($"Стоимость: {Price().ToString()} рублей");
+            }
         }
         
         public class Canvas : Product
         {
             public override string Name()
             {
-                string name = "Красивый холст";
+                string name = "Фотография на холсте 50*40";
                 
                 return name;
             }
@@ -50,6 +64,35 @@ namespace Shop
                 int price = 1150;
 
                 return price;
+            }
+            
+            public override void GetAction()
+            {
+                Console.WriteLine($"Наименование: {Name()}");
+                Console.WriteLine($"Стоимость: {Price().ToString()} рублей");
+            }
+        }
+        
+        public class Pin : Product
+        {
+            public override string Name()
+            {
+                string name = "Значек закатной 56см";
+                
+                return name;
+            }
+
+            public override int Price()
+            {
+                int price = 100;
+
+                return price;
+            }
+            
+            public override void GetAction()
+            {
+                Console.WriteLine($"Наименование: {Name()}");
+                Console.WriteLine($"Стоимость: {Price().ToString()} рублей");
             }
         }
     }

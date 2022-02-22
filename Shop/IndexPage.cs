@@ -5,7 +5,6 @@ namespace Shop
 {
     public class IndexPage
     {
-        static int invalid = 0;
         public IndexPage()
         {
             ConsoleKey key;
@@ -15,8 +14,9 @@ namespace Shop
             Console.WriteLine("3:Корзина");
             Console.WriteLine("4:Контакты");
             Console.WriteLine("0:Выход");
-            key = Console.ReadKey().Key;
             Console.WriteLine();
+            key = Console.ReadKey().Key;
+            
             switch (key)
             {
                 case ConsoleKey.D1:
@@ -32,7 +32,8 @@ namespace Shop
                     new Contact();
                     break;
                 case ConsoleKey.D0:
-                    Console.WriteLine("Досвидания");
+                    Console.WriteLine();
+                    Console.WriteLine("До свидания");
                     Environment.Exit(0);
                     break;
                 default:
@@ -43,21 +44,8 @@ namespace Shop
         
         static void InvalidInput()
         {
-            switch(invalid)
-            {
-                case 0:
-                    Console.WriteLine("Неверный ввод");
-                    break;
-                case 1:
-                    Console.WriteLine("Опять не верно. ВНИМАТЕЛЬНЕЙ!");
-                    break;
-                case 2:
-                default:
-                    Console.WriteLine("Для выхода нажмите 0");
-                    Console.WriteLine("Ты ШО писать не умеешь не граматный");
-                    break;
-            }
-            invalid++;  
+            Console.WriteLine("Не верный пункт, попробуйте ещё раз");
+            new IndexPage();
         }
             
     }

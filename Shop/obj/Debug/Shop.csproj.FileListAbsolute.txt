@@ -4,3 +4,10 @@
 /Users/dmitrijkalugin/Developers/C#Projects/Shop/Shop/obj/Debug/Shop.csproj.CoreCompileInputs.cache
 /Users/dmitrijkalugin/Developers/C#Projects/Shop/Shop/obj/Debug/Shop.exe
 /Users/dmitrijkalugin/Developers/C#Projects/Shop/Shop/obj/Debug/Shop.pdb
+C:\Users\cap0n\RiderProjects\ConsolMarket\Shop\obj\Debug\Shop.exe
+C:\Users\cap0n\RiderProjects\ConsolMarket\Shop\obj\Debug\Shop.pdb
+C:\Users\cap0n\RiderProjects\ConsolMarket\Shop\bin\Debug\Shop.exe
+C:\Users\cap0n\RiderProjects\ConsolMarket\Shop\bin\Debug\Shop.pdb
+C:\Users\cap0n\RiderProjects\ConsolMarket\Shop\obj\Debug\Shop.csproj.AssemblyReference.cache
+C:\Users\cap0n\RiderProjects\ConsolMarket\Shop\obj\Debug\Shop.csproj.SuggestedBindingRedirects.cache
+C:\Users\cap0n\RiderProjects\ConsolMarket\Shop\obj\Debug\Shop.csproj.CoreCompileInputs.cache

@@ -30,12 +30,6 @@ namespace Shop
         
         private void CartAdded(string Name, int Query)
         {
-            for (int i = 0; i < 10; i++)
-            {
-                Cart cart = new Cart("Мандарины" + i.ToString(), i, 3*i);
-                
-                Console.WriteLine(cart.Print());
-            }
             
         }
 
