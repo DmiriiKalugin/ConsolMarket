@@ -13,10 +13,13 @@ namespace Shop
 
         public void Print()
         {
+            Console.WriteLine();
             foreach (var orders in _carts)
             {
                 Console.WriteLine(orders);
             }
+
+            new Catalog();
         }
 
         public void CartAdded(string name, int query, int price)

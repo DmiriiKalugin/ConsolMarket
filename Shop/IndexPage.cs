@@ -26,7 +26,7 @@ namespace Shop
                     new Catalog();
                     break;
                 case ConsoleKey.D3:
-                    new Cart();
+                    new Cart().Print();
                     break;
                 case ConsoleKey.D4:
                     new Contact();

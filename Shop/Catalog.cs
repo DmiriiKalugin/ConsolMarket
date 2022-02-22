@@ -6,13 +6,19 @@ namespace Shop
     public class Catalog
     {
         private Cart _cart = new Cart();
-        
+
         private readonly DbProducts.Shirts _shirts = new DbProducts.Shirts();
         private readonly DbProducts.Cup _cup = new DbProducts.Cup();
         private readonly DbProducts.Canvas _canvas = new DbProducts.Canvas();
         private readonly DbProducts.Pin _pin = new DbProducts.Pin();
 
         public Catalog()
+        {
+            Cat();
+        }
+
+        
+        private void Cat()
         {
             ConsoleKey key;
             
@@ -23,9 +29,8 @@ namespace Shop
             Console.WriteLine();
             
             SwitchKeysCatalog(key);
-            
         }
-
+        
         private void ActionsInCatalog()
         {
             Console.WriteLine();
@@ -149,7 +154,7 @@ namespace Shop
                     Success(name, count, price);
                     break;
                 case ConsoleKey.D0:
-                    new Catalog();
+                    Cat();
                     break;
                 default:
                     InvalidInput();
@@ -176,7 +181,7 @@ namespace Shop
                     _cart.Print();
                     break;
                 case ConsoleKey.D2:
-                    new Catalog();
+                    Cat();
                     break;
                 case ConsoleKey.D0:
                     new IndexPage();
