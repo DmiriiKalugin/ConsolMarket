@@ -5,11 +5,12 @@ namespace Shop
 {
     public class Catalog
     {
+        private Cart _cart = new Cart();
+        
         private readonly DbProducts.Shirts _shirts = new DbProducts.Shirts();
         private readonly DbProducts.Cup _cup = new DbProducts.Cup();
         private readonly DbProducts.Canvas _canvas = new DbProducts.Canvas();
         private readonly DbProducts.Pin _pin = new DbProducts.Pin();
-
 
         public Catalog()
         {
@@ -145,7 +146,7 @@ namespace Shop
             switch (choise)
             {
                 case ConsoleKey.D1:
-                    Success();
+                    Success(name, count, price);
                     break;
                 case ConsoleKey.D0:
                     new Catalog();
@@ -156,8 +157,10 @@ namespace Shop
             }
         }
         
-        private void Success()
-        {   Console.WriteLine("Товар успешно помещен в корзину");
+        private void Success(string name, int query, int price)
+        {   
+            _cart.CartAdded(name, query, price);
+            Console.WriteLine("Товар успешно помещен в корзину");
             Console.WriteLine();
             Console.WriteLine("Выберите нужное действие:");
             Console.WriteLine();
@@ -170,7 +173,7 @@ namespace Shop
             switch (key)
             {
                 case ConsoleKey.D1:
-                    new Cart();
+                    _cart.Print();
                     break;
                 case ConsoleKey.D2:
                     new Catalog();
@@ -183,7 +186,6 @@ namespace Shop
                     break;
             }
         }
-
         static void InvalidInput()
         {
             Console.WriteLine("Неверная категория, попробуйте ещё");

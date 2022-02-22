@@ -4,33 +4,31 @@ namespace Shop
 {
     public class Cart
     {
-        private string Name;
-        private int Query;
-        private float Price;
+        private readonly string[] _carts = new string[] {""};
 
         public Cart()
         {
-            Console.WriteLine("Корзина");
-        }
-        
-        public Cart(string name, int query, float price)
-        {
-            Name = name;
-            Query = query;
-            Price = price;
+
         }
 
-        public string Print()
+        public void Print()
         {
-            string order =
-                $"Наименование : {Name}  Количество: {Query.ToString()} шт. Стоимость: {Price.ToString()} руб.";
-
-            return order;
+            foreach (var orders in _carts)
+            {
+                Console.WriteLine(orders);
+            }
         }
-        
-        private void CartAdded(string Name, int Query)
+
+        public void CartAdded(string name, int query, int price)
         {
-            
+
+            for (int i = 0; i < _carts.Length; i++)
+            {
+                _carts[i] =
+                    $"Наименование : {name}  Количество: {query.ToString()} шт. Стоимость: {price.ToString()} руб.";
+           
+            }
+
         }
 
     }
